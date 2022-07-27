@@ -3,7 +3,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;  
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -12,8 +12,26 @@ code {
     monospace;
 }
 
+.content{
+  width: 1120px;
+  max-width: 93.33333%;
+  margin: 0 auto;  
+}
+
 .flex{
   display: flex;  
+}
+
+.w-30{
+  width: 32.142857%;  
+}
+
+.w-100{
+  width: 100%;  
+}
+
+.flex-1{
+  flex:1
 }
 
 .align-center{
@@ -28,45 +46,248 @@ code {
   justify-content: center;
 }
 
+.jumbotron{
+  background-color: #F5F7FA;
+  height: 474px;
+}
+
+.jumbotron-container{
+  height: 100%;
+}
+
+.jumbotron-container h1{
+  margin: 0;
+  text-align: left;
+  font-size: 3em;
+}
+
+.wiso-container h3{
+  margin-left: 15px;
+}
+.text-left{
+  text-align:left ;
+}
+
 .justify-between{
   justify-content: space-between;
+}
+
+.justify-start{
+  justify-content: flex-start;
+}
+
+.justify-end{
+  justify-content: flex-end;
 }
 
 .menu-bar{
   display: flex;
   align-items: center;
-  width: 80%;
-  margin: 0 auto;
-  justify-content: space-evenly
+  justify-content: space-between;
+  height: 80px;
 }
 
 .menu-item{
   display: flex;
   text-decoration: none;
   align-items: center;
-  justify-content: center;
-  padding: 5px;
+  justify-content: center;  
+  font-size: 10px;
+}
+
+.menu-item.no-icon{
+  height: 19px;
+  margin-right: 5px;
+}
+
+.menu-item.no-icon span { 
   font-size: 14px;
 }
 
-.menu-item span {
-  padding-right: 5px;
-}
-
-.menu-item p{
-  margin: 5px;
+.menu-item p{ 
+  font-size: 10px;
 }
 
 .action-button{
-  border-radius: 15px;
-  padding: 6px 10px;
-  background: #6262ff;
+  border-radius: 22px;
+  padding: 9.34px 18.41px;
+  background: #023E84;
   color: white;
   text-decoration: none;
   font-size: 13px;
   font-weight: bold;
 }
 
+.action-button.orange{
+  padding: 15px 30px;
+  font-size: 21px;
+  background: #ED751B; 
+  width: 220px;
+  border-radius: 24px;
+}
+
+.action-button.orange span{
+  text-align: center;
+}
+
 .action-button img{
   margin-right: 5px;
 }
+
+.flex-18{
+  width: 54.107143%
+}
+
+.flex-82{
+  width: 45.892857%;
+}
+
+.w-60{
+  width: 60%;
+}
+
+.h-100{
+  height: 100%;
+}
+
+.flex-reverse{
+  flex-direction: row-reverse;
+}
+
+.footer-section{
+  height: 144px;
+  background-color: #023E84;
+}
+
+.footer-section .links > a{
+  text-decoration: none;
+  color: white;
+  margin-right: 7px;
+}
+
+.card-container{
+  border-radius: 13px;
+  box-shadow: 0px 2px 5px 0 #cbcad5;
+  background-color: white; 
+  padding: 28.08px 0; 
+}
+
+.card-container .card-content h4{
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;  
+}
+
+.card-container .card-content p{
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;  
+}
+
+.jumbotron .teaser img{  
+  width:514px; 
+  height: auto;  
+}
+
+.product-section{
+  padding: 80px 0;
+}
+
+.product-section img{  
+  width:496px; 
+  height: auto;
+}
+
+.product-section .sm-title{
+  color:#ED751B;
+  font-size: 15px;
+  height: 19px;
+}
+
+.product-section .lg-title{
+  color:#023E84;
+  font-size: 32px;
+}
+
+.product-section p{
+  font-size: 16px;
+}
+
+.mt-0{
+  margin-top:0;
+}
+
+.mb-0{
+  margin-bottom:0;
+}
+
+.lg-screen-none{
+  display: none !important;
+}
+
+
+
+@media (max-width: 576px) { }
+
+
+@media (max-width: 768px) {
+  .content{
+    width: 700px;
+    max-width: 91.14583%;
+  }
+  .flex-18{
+    width:51.42857%
+  }
+
+  .flex-82{
+    width:48.57143%
+  }
+
+  .jumbotron-container h1{
+    font-size: 32px;
+  }
+
+  .jumbotron .teaser img{  
+    width:531.19px;    
+  } 
+
+  .md-screen-none {
+    display: none;
+  }
+
+  .lg-screen-none{
+    display: flex !important;
+  }
+
+  .action-button.orange{
+    padding: 13.34px 10px;
+    font-size: 16px;
+  }
+
+  .w-30{
+    width: 32.28571%;
+  }
+
+  .card-container .card-content p,
+  .card-container .card-content h4 {
+    width: 140px;
+  }
+
+  .product-section img{  
+    width:320px; 
+    height: auto;
+  }
+
+  .md-footer{
+    width: 65.85714%;
+  }
+
+ }
+
+
+@media (max-width: 992px) { }
+
+
+@media (min-width: 1200px) { }
