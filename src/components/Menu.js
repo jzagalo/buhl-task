@@ -9,16 +9,18 @@ import HeaderLogo from './HeaderLogo'
 import ActionButton from './ActionButton'
 import actionImage from '../images/action-image.svg'
 import harmburger from '../images/harmburger.svg'
+import anmelden from '../images/anmelden.svg'
 
 
 const mainMenuData=[ 'Alle Produckte', 'Produktfinder', 'Empfehlungen', 'Textversion' ]
-const iconData = [{ text: "Suchen", img: search },{ text: "Apps", img: apps },
+const iconMenuData = [{ text: "Suchen", img: search },{ text: "Apps", img: apps },
                     { text: "KundenCenter", img: customer },{ text: "Warenkorb", img: basket }];
 
-
+const mobileMenuData = [{ text: "Warenkorb", img: basket },{ text: "Anmelden", img: anmelden }];
 function Menu() {
     const mainMenu = mainMenuData.map((item, i) => <MenuItem key={i} text={item} /> )
-    const iconMenu = iconData.map((iconItem, i) => <IcomMenuItem key={i} text={iconItem.text} src={iconItem.img} /> )
+    const iconMenu = iconMenuData.map((iconItem, i) => <IcomMenuItem key={i} text={iconItem.text} src={iconItem.img} /> )
+    const mobileMenu = mobileMenuData.map((iconItem, i) => <IcomMenuItem key={i} text={iconItem.text} src={iconItem.img} /> )
     
     return (
         <div>
@@ -44,12 +46,18 @@ function Menu() {
             </div>           
             <div className="flex content justify-between align-center lg-screen-none" style={{ height: "80px", display: "flex"}} >                            
                 <div className="flex justify-between align-center">
-                    <img src={harmburger} alt="Hamburger Icon" width="24" />
+                    <div className="flex flex-column align-center hamburger-wrapper menu-item">
+                        <img src={harmburger} alt="Hamburger Icon" width="24" />
+                        <p>Menu</p>
+                    </div>                    
                     <HeaderLogo />                                                                                     
                 </div>                    
-                <div className="flex justify-between align-center" style={{ width: "61.28571%"}}>                    
+                <div className="flex justify-between align-center sm-screen-none" style={{ width: "61.28571%"}}>                    
                     {iconMenu}                           
                     <ActionButton image={actionImage} text="ANMELDEN" /> 
+                </div>
+                <div className="flex justify-between align-center md-screen-none sm-mobile-screen" style={{ width: "36.142857%"}}>                    
+                    {mobileMenu}                     
                 </div>
             </div>     
         </div>

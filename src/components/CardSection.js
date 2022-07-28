@@ -16,8 +16,8 @@ function CardSection(props) {
     return (
         <div className="cards-sections">
             <div className="content">
-                <h3 className="text-left">Das Beste für Sie zusammengestellt</h3>
-                <div className="flex justify-between">
+                <h3 className="text-left card-topic-header">Das Beste für Sie zusammengestellt</h3>
+                <div className="flex justify-between cards-sm">
                     {cards}
                 </div>           
             </div>

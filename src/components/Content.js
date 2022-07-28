@@ -15,7 +15,7 @@ function Content({ modClass, reverse }) {
                     sodass Sie stets über neueste Entwicklungen Ihrer Kundschaft
                     auf dem Laufenden bleiben.
                 </p>
-                <div className="text-left">
+                <div className="text-left action-btn-sm">
                     <ActionButton large="orange" text="JETZT TESTEN" />
                 </div>                     
             </div>  

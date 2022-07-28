@@ -1,9 +1,9 @@
 import React from 'react';
 import bild from '../images/bild-lg.png'
 
-function Product(props) {
+function Product({reverse}) {
     return (        
-        <div>
+        <div className={reverse ? "flex-18 m-auto": ""}>
             <img src={bild} alt="icon" /> 
         </div>        
     );
